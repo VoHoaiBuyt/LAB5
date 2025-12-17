@@ -17,6 +17,7 @@
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="main.css">
     </head>
 
     <body class="bg-light">
@@ -30,7 +31,7 @@
     </a>
     <form class="d-flex col-xl-2 col-md-12" role="search">
       <input class="form-control rounded-end-0 w-50" type="search" placeholder="Search" aria-label="Search"/>
-      <button class="btn btn-outline-warning w-50 rounded-start-0" type="submit">Tìm kiếm</button>
+      <button class="btn btn-warning w-50 rounded-start-0" type="submit">Tìm kiếm</button>
     </form>
   </div>
                 </nav>
@@ -44,7 +45,7 @@
     
     <!-- Logo ở giữa (chỉ hiển thị trên md) -->
     <div class="d-md-flex d-lg-none justify-content-center flex-grow-1 mx-2">
-      <div class="bg-light border border-primary px-4 py-2 rounded text-center">
+      <div class="bg-light px-4 py-2 rounded text-center">
         <img src="images/logo.png" alt="logo">
       </div>
     </div>
@@ -56,18 +57,18 @@
     
     <!-- Menu navigation (collapse cho md, hiển thị full cho lg+) -->
     <div class="collapse navbar-collapse col-xl-9" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="menu-nav navbar-nav me-auto mb-2 mb-lg-0 col-md-6">
         <li class="nav-item">
-          <a href="#" class="nav-link text-danger fw-bold active" aria-current="page">TRANG CHỦ</a>
+          <a href="#" class="nav-link text-danger text-uppercase active" aria-current="page">TRANG CHỦ</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-black fw-bold active" aria-current="page" href="#">GIỚI THIỆU</a>
+          <a class="nav-link text-black text-uppercase" aria-current="page" href="#">GIỚI THIỆU</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-black fw-bold" href="#">SẢN PHẨM</a>
+          <a class="nav-link text-black text-uppercase" href="#">SẢN PHẨM</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-black fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle text-black text-uppercase" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             TIN TỨC
           </a>
           <ul class="dropdown-menu">
@@ -79,9 +80,16 @@
     </div>
     
     <!-- Menu đăng nhập/đăng ký (collapse cho md, hiển thị full cho lg+) -->
-    <div class="collapse navbar-collapse justify-content-start container col-xl-3" id="navbarAuth">
-      <div class="d-flex align-items-center">
-        <a class="text-black fw-bold text-decoration-none me-3" href="#">ĐĂNG NHẬP</a>/<a class="text-black fw-bold text-decoration-none ms-3" href="#">ĐĂNG KÝ</a>
+    <div class="collapse navbar-collapse justify-content-end container col-xl-3 col-md-6" id="navbarAuth">
+      <div class="d-flex align-items-center justify-content-end">
+        <ul class="text-decoration-none list-unstyled">
+          <li class="nav-item">
+            <a href="#" class="nav-link fw-bold" aria-current="page">DANG NHAP</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link fw-bold" aria-current="page">DANG KY</a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -115,13 +123,21 @@
           </div>
           <!--card products-->
           <div class="container">
-            <h1 class="text-center">Danh Mục <span class="text-danger">Sản Phẩm</span>
+            <h1 class="text-center display-4">Danh Mục <span class="text-danger">Sản Phẩm</span>
             </h1>
             <hr class="border-danger border border-2 container mt-0" style="width: 50px;">
             <div class="container mt-5">
               <div class="row g-3">
                 <div class="col-12 col-md-6 col-xl-4">
-                  <div class="card h-100">
+                  <div class="box card h-100 border-0 shadow-0 shadow-sm">
+                    <div class="option d-flex flex-column w-100 h-100 justify-content-center align-items-center">
+                      <button class="btn btn-danger w-50 mb-3 rounded-pill">
+                        Them vao gio
+                      </button>
+                      <button class="btn btn-danger w-50 rounded-pill">
+                        Mua ngay
+                      </button>
+                    </div>
                     <img src="images/anh1.jpg" class="card-img-top position-relative" alt="...">
                     <div class="card-body">
                       <h6 class="card-title text-danger position-absolute ms-5 " style="bottom:15%">Áo khoác nữ<span class="text-success ms-5">450.000</span></h6>
@@ -129,7 +145,15 @@
                   </div>
                 </div>
                 <div class="col-12 col-md-6 col-xl-4">
-                  <div class="card h-100">
+                  <div class="box card h-100 border-0 shadow-0 shadow-sm">
+                    <div class="option d-flex flex-column w-100 h-100 justify-content-center align-items-center">
+                      <button class="btn btn-danger w-50 mb-3 rounded-pill">
+                        Them vao gio
+                      </button>
+                      <button class="btn btn-danger w-50 rounded-pill">
+                        Mua ngay
+                      </button>
+                    </div>
                     <img src="images/anh2.jpg" class="card-img-top position-relative" alt="...">
                     <div class="card-body">
                       <h6 class="card-title text-danger position-absolute ms-5 " style="bottom:15%">Áo len nữ<span class="text-success ms-5">380.000</span></h6>
@@ -137,7 +161,15 @@
                   </div>
                 </div>
                 <div class="col-12 col-md-6 col-xl-4">
-                  <div class="card h-100">
+                  <div class="box card h-100 border-0 shadow-0 shadow-sm">
+                    <div class="option d-flex flex-column w-100 h-100 justify-content-center align-items-center">
+                      <button class="btn btn-danger w-50 mb-3 rounded-pill">
+                        Them vao gio
+                      </button>
+                      <button class="btn btn-danger w-50 rounded-pill">
+                        Mua ngay
+                      </button>
+                    </div>
                     <img src="images/anh3.jpg" class="card-img-top position-relative" alt="...">
                     <div class="card-body">
                       <h6 class="card-title text-danger position-absolute ms-5 " style="bottom:15%">Áo khoác nam<span class="text-success ms-5">1.685.000</span></h6>
@@ -145,7 +177,15 @@
                   </div>
                 </div>
                 <div class="col-12 col-md-6 col-xl-4">
-                  <div class="card h-100">
+                  <div class="box card h-100 border-0 shadow-0 shadow-sm">
+                    <div class="option d-flex flex-column w-100 h-100 justify-content-center align-items-center">
+                      <button class="btn btn-danger w-50 mb-3 rounded-pill">
+                        Them vao gio
+                      </button>
+                      <button class="btn btn-danger w-50 rounded-pill">
+                        Mua ngay
+                      </button>
+                    </div>
                     <img src="images/anh4.jpg" class="card-img-top position-relative" alt="...">
                     <div class="card-body">
                       <h6 class="card-title text-danger position-absolute ms-5 " style="bottom:15%">Áo khoác nữ<span class="text-success ms-5">450.000</span></h6>
@@ -153,7 +193,15 @@
                   </div>
                 </div>
                 <div class="col-12 col-md-6 col-xl-4">
-                  <div class="card h-100">
+                  <div class="box card h-100 border-0 shadow-0 shadow-sm">
+                    <div class="option d-flex flex-column w-100 h-100 justify-content-center align-items-center">
+                      <button class="btn btn-danger w-50 mb-3 rounded-pill">
+                        Them vao gio
+                      </button>
+                      <button class="btn btn-danger w-50 rounded-pill">
+                        Mua ngay
+                      </button>
+                    </div>
                     <img src="images/anh5.jpg" class="card-img-top position-relative" alt="...">
                     <div class="card-body">
                       <h6 class="card-title text-danger position-absolute ms-5 " style="bottom:15%">Áo khoác nữ<span class="text-success ms-5">450.000</span></h6>
@@ -161,7 +209,15 @@
                   </div>
                 </div>
                 <div class="col-12 col-md-6 col-xl-4">
-                  <div class="card h-100">
+                  <div class="box card h-100 border-0 shadow-0 shadow-sm">
+                    <div class="option d-flex flex-column w-100 h-100 justify-content-center align-items-center">
+                      <button class="btn btn-danger w-50 mb-3 rounded-pill">
+                        Them vao gio
+                      </button>
+                      <button class="btn btn-danger w-50 rounded-pill">
+                        Mua ngay
+                      </button>
+                    </div>
                     <img src="images/anh6.jpg" class="card-img-top position-relative" alt="...">
                     <div class="card-body">
                       <h6 class="card-title text-danger position-absolute ms-5 " style="bottom:15%">Áo khoác nữ<span class="text-success ms-5">450.000</span></h6>
